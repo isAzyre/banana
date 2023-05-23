@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+body{
+	background-image: url("../img/song.jpg");
+	background-color:#008080;
+	font-family: Verdana;
+	color: black;
+}
+
+div{
+	text-align: center;
+}
+
+label{
+	font-family:Verdana;
+	color: #000080;
+	font-size:13px;
+}
+a{
+	font-family:Verdana;
+	color: #000080;
+	font-size:13px;
+}
+a:hover{
+	font-family:Verdana;
+	color: #ADD8E6;
+}
+
+input[type=submit],input[type=reset],input[type=button]{
+	background-color:black;
+	color: teal;
+	padding: 5px;
+	border: 1;
+}
+
+/* Selector de id?começa com o # !!*/
+
+#lista{
+	/* para anular o border da tabela e podermos alterar*/
+	border-collapse: collapse;
+}
+
+#lista td {
+/*			V-- espessura da linha e cor*/
+	border: 1px solid #ddd;
+	padding: 10px; /* */
+	text-align: center; /* alinhar o texto no centro */	
+}
+/*hover, quando se passa por cima da linha*/
+
+#lista tr:hover{
+	background-color: #ddd;
+}
+
