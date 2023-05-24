@@ -114,12 +114,15 @@
     <Content Include="img\Foo Fighters.jpg" />
     <Content Include="img\Hiatus Kaiyote.jpg" />
     <Content Include="img\icon\fav_icon.png" />
-    <Content Include="img\Kendrick-Lamar.jpg" />
+    <Content Include="img\In Utero.jpg" />
+    <Content Include="img\José Cid.jpg" />
+    <Content Include="img\Kendrick Lamar.jpg" />
     <Content Include="img\Mood Valiant.jpg" />
     <Content Include="img\Nevermind.jpg" />
     <Content Include="img\Nirvana.jpg" />
     <Content Include="img\Queen II.jpg" />
     <Content Include="img\Queen.jpg" />
+    <Content Include="img\Quem Tem Medo De Baladas.jpg" />
     <Content Include="img\System of a Down.jpg" />
     <Content Include="img\The Car.jpg" />
     <Content Include="img\To Pimp a Butterfly.jpg" />
@@ -130,7 +133,7 @@
     <Content Include="img\background\song.jpg" />
     <Content Include="index.aspx" />
     <Content Include="Insere.aspx" />
-    <Content Include="teste.aspx" />
+    <Content Include="Insere_old.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -164,12 +167,12 @@
       <DependentUpon>Insere.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="teste.aspx.cs">
-      <DependentUpon>teste.aspx</DependentUpon>
+    <Compile Include="Insere_old.aspx.cs">
+      <DependentUpon>Insere_old.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="teste.aspx.designer.cs">
-      <DependentUpon>teste.aspx</DependentUpon>
+    <Compile Include="Insere_old.aspx.designer.cs">
+      <DependentUpon>Insere_old.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

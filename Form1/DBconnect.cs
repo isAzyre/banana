@@ -83,7 +83,7 @@ namespace WebMySQL01
         {
             try
             {
-                string query = "SELECT nome,num_membros as 'nº de membros' FROM bandas";
+                string query = "SELECT nome as 'Nome Banda',num_membros as 'Nº de membros' FROM bandas";
 
 
                 if (this.OpenConnection())
@@ -426,6 +426,7 @@ namespace WebMySQL01
                     Console.WriteLine(ex.Message);
                     return dados = "Erro";
                 }
+
                 finally { CloseConnection(); }
             }
 

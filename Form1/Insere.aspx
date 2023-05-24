@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Insere.aspx.cs" Inherits="Form1.Insere" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Insere.aspx.cs" Inherits="Form100.Insere_teste" %>
 
 <!DOCTYPE html>
 
@@ -11,45 +11,64 @@
         {
             background-image: url(img/background/song.jpg);
         }
+        div
+        {
+            display:block;
+           
+        }
     </style>
     <title>Inserção!!</title>
 </head>
 <body>
-<div align="center" border="1">
-    <form id="form1" runat="server" action="insere.aspx">
+
+<div class="container" align="center">
+
+
+        <asp:Label ID="Label10" runat="server" Text="Inserir"></asp:Label><br/>
+    
+        <form id="form100" runat="server">
+        <div>
+            <asp:RadioButton ID="RadioButton10" Text="Banda" runat="server" GroupName="escolha" OnCheckedChanged="RadioButton10_CheckedChanged" AutoPostBack="True" />
+            <asp:RadioButton ID="RadioButton20" Text="Album" runat="server" GroupName="escolha" OnCheckedChanged="RadioButton20_CheckedChanged" AutoPostBack="True"/>
+            <asp:RadioButton ID="RadioButton30" Text="Musica" runat="server" GroupName="escolha" OnCheckedChanged="RadioButton30_CheckedChanged" AutoPostBack="true"/>
+        </div>
+            <br />
+        <div>
+            <asp:Label Text="text" runat="server" id="lbl1"/><br />
+            <asp:TextBox ID="TextBox10" runat="server" Width="275px"></asp:TextBox><br /><br />
+       
+            <asp:Label Text="text" runat="server" id="lbl2"/><br />
+            <asp:TextBox ID="TextBox20" runat="server" Width="175px"></asp:TextBox><br /><br />
         
-        <asp:Button ID="goBack" runat="server" Text="Index" OnClick="goBack_Click" />
-        <br /><br />
-           
-        <div>
-            Inserir Banda <br />
-            Nome:<br /> <asp:TextBox ID="txt_nomebanda" runat="server"></asp:TextBox> <br />
-            Numero de membros na banda:<br /> <asp:TextBox ID="txt_nummembros" runat="server"></asp:TextBox>
-            <br /><br />
-            <asp:Button ID="submit_banda" runat="server" Text="Submeter" OnClick="submit_banda_Click" />
+            <asp:Label Text="text" runat="server" id="lbl3"/><br />
+            <asp:DropDownList ID="DropDownList20" runat="server" AutoPostBack="True"></asp:DropDownList><br /><br />  
+        
+            <asp:Label Text="text" runat="server" id="lbl4"/><br />
+            <asp:DropDownList ID="DropDownList30" runat="server" AutoPostBack="True"></asp:DropDownList><br />
         </div>
-        <br /><br />
+            <br />
+            <br />
         <div>
-            Inserir Album<br />
-            Nome do album:<br /> <asp:TextBox ID="txt_nome_album" runat="server"></asp:TextBox> <br />
-            Numero de musicas:<br /> <asp:TextBox ID="txt_numr_musicas" runat="server"></asp:TextBox>  <br />
-            Nome da banda: <br /> <asp:DropDownList ID="ddl_bandas" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddl_bandas_SelectedIndexChanged"></asp:DropDownList><br /> 
-            Genero de musica: <br /> <asp:DropDownList ID="ddl_genero" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddl_genero_SelectedIndexChanged"></asp:DropDownList>
-            
+            <asp:Label ID="Label20" runat="server" Text="Label"></asp:Label>
             <br /><br />
-            <asp:Button ID="submit_album" runat="server" Text="Submeter" OnClick="submit_album_Click" />
+            <asp:Button Text="Inserir" ID="o_submit" runat="server" OnClick="o_submit_Click1" />
         </div>
-        <br /><br /> 
-        <div>   
-            Inserir Musica<br />
-            Nome:<br /> <asp:TextBox ID="txt_nomemusica" runat="server"></asp:TextBox> <br />
-            Nome do album:<br /> <asp:DropDownList ID="ddl_albuns" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddl_albuns_SelectedIndexChanged"></asp:DropDownList>
             <br /><br />
-            <asp:Button ID="submit_musica" runat="server" Text="Submeter" OnClick="submit_musica_Click" />
-     </div> 
-        <br />
-        <asp:Label ID="lblSucesso" runat="server"></asp:Label>
+        <div align="center">
+            <asp:GridView ID="GridView50" runat="server" AllowPaging="True" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnPageIndexChanging="GridView50_PageIndexChanging" PageSize="6">
+                <FooterStyle BackColor="#CCCCCC" />
+                <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+                <RowStyle BackColor="White" />
+                <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#808080" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#383838" />
+            </asp:GridView>
+        </div>
     </form>
+
 </div>
 </body>
 </html>
