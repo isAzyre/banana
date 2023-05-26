@@ -22,7 +22,7 @@ namespace Form100
         {
             if (!IsPostBack)
             {
-                limpacampos1();
+                first();               
                 ligacao1.CarregarBandas(ref DropDownList20);
                 ligacao1.CarregarGeneros(ref DropDownList30);
             }
@@ -49,49 +49,64 @@ namespace Form100
 
         protected void o_submit_Click1(object sender, EventArgs e)
         {
-            if(RadioButton10.Checked) 
-            {
-                if (ligacao1.InserirBanda(TextBox10.Text.Trim(), Convert.ToInt32(TextBox20.Text.TrimStart().TrimEnd())))
+            try 
+            { 
+            
+                if(RadioButton10.Checked) 
                 {
-                    Label20.Text = "Inseriu com sucesso.";
-                    ligacao1.CarregarBandas(ref DropDownList20);
+                    if (ligacao1.InserirBanda(TextBox10.Text.Trim(), Convert.ToInt32(TextBox20.Text.TrimStart().TrimEnd())))
+                    {
+                        Label20.ForeColor = Color.Green;
+                        Label20.Text = "Inseriu com sucesso.";
+                        ligacao1.CarregarBandas(ref DropDownList20);
+                    }
+                    else
+                    {
+                        Label20.ForeColor = Color.Red;
+                        Label20.Text = "Erro na inserção.";
+                    }
                 }
-                else
+                else if(RadioButton20.Checked)
                 {
-                    Label20.Text = "Erro na inserção.";
-                }
-            }
-            else if(RadioButton20.Checked)
-            {
-                string nome_album = TextBox10.Text.Trim();
-                int num_musicas = Convert.ToInt32(TextBox20.Text.Trim());
+                    string nome_album = TextBox10.Text.Trim();
+                    int num_musicas = Convert.ToInt32(TextBox20.Text.Trim());
 
-                int id_banda = Convert.ToInt32(DropDownList20.SelectedItem.Text.Substring(0, DropDownList20.SelectedItem.Text.IndexOf('-')));
-                int id_gen = Convert.ToInt32(DropDownList30.SelectedItem.Text.Substring(0, DropDownList30.SelectedItem.Text.IndexOf('-')));
-                if (ligacao1.InserirAlbum(nome_album, num_musicas, id_banda, id_gen))
-                {
-                    Label20.Text = "Inseriu com sucesso.";
-                    ligacao1.CarregarAlbuns(ref DropDownList20);
+                    int id_banda = Convert.ToInt32(DropDownList20.SelectedItem.Text.Substring(0, DropDownList20.SelectedItem.Text.IndexOf('-')));
+                    int id_gen = Convert.ToInt32(DropDownList30.SelectedItem.Text.Substring(0, DropDownList30.SelectedItem.Text.IndexOf('-')));
+                    if (ligacao1.InserirAlbum(nome_album, num_musicas, id_banda, id_gen))
+                    {
+                        Label20.ForeColor = Color.Green;
+                        Label20.Text = "Inseriu com sucesso.";
+                        ligacao1.CarregarAlbuns(ref DropDownList20);
+                    }
+                    else
+                    {
+                        Label20.ForeColor = Color.Red;
+                        Label20.Text = "Erro na inserção.";
+                    }
                 }
-                else
+                else 
                 {
-                    Label20.Text = "Erro na inserção.";
-                }
-            }
-            else 
-            {
-                string nome_musica = TextBox10.Text.Trim();
-                int id_album = Convert.ToInt32(DropDownList20.SelectedItem.Text.Substring(0, DropDownList20.SelectedItem.Text.IndexOf('-'))); ;
+                    string nome_musica = TextBox10.Text.Trim();
+                    int id_album = Convert.ToInt32(DropDownList20.SelectedItem.Text.Substring(0, DropDownList20.SelectedItem.Text.IndexOf('-'))); ;
                
-                if (ligacao1.InserirMusica(nome_musica, id_album))
-                {
-                    Label20.Text = "Inseriu com sucesso.";
-                }
-                else
-                {
-                    Label20.Text = "Erro na inserção.";
-                }
+                    if (ligacao1.InserirMusica(nome_musica, id_album))
+                    {
+                        Label20.ForeColor = Color.Green;
+                        Label20.Text = "Inseriu com sucesso.";
+                    }
+                    else
+                    {
+                        Label20.ForeColor = Color.Red;
+                        Label20.Text = "Erro na inserção.";
+                    }
 
+                }
+            }
+            catch 
+            {
+                Label20.ForeColor = Color.Red;
+                Label20.Text = "Falta dados";
             }
         }
         public void bandas_in()
@@ -134,13 +149,27 @@ namespace Form100
             ligacao1.Bind3(ref GridView50);
             GridView50.DataBind();
         }
-
-            public void limpacampos1()
+        public void first()
         {
             lbl1.Text = "";
             lbl2.Text = "";
             lbl3.Text = "";
             lbl4.Text = "";
+            TextBox10.Visible = false;
+            TextBox20.Visible = false;
+            Label20.Text = "";
+            DropDownList20.Visible = false; ;
+            DropDownList30.Visible = false;
+            GridView50.DataSource = null;
+        }
+
+        public void limpacampos1()
+        {
+            lbl1.Text = "";
+            lbl2.Text = "";
+            lbl3.Text = "";
+            lbl4.Text = "";
+            TextBox10.Visible = true;
             TextBox10.Text = "";
             TextBox20.Text = "";
             Label20.Text = "";
@@ -149,13 +178,11 @@ namespace Form100
             GridView50.DataSource=null;
         }
 
-        protected void GridView50_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-            GridView50.PageIndex = e.NewPageIndex;
-            ligacao1.Bind(ref GridView50);
-            GridView50.DataBind();
-        }
+    
 
- 
+        protected void goBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("index.aspx");
+        }
     }
 }

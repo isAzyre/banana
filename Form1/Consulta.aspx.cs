@@ -21,7 +21,6 @@ namespace Form1
                 GridView1.DataBind();
                 GridView2.DataBind();
                 GridView3.DataBind();
-              
             }
 
         }

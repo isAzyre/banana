@@ -14,7 +14,6 @@
         div
         {
             display:block;
-           
         }
     </style>
     <title>Inserção!!</title>
@@ -22,11 +21,13 @@
 <body>
 
 <div class="container" align="center">
-
-
         <asp:Label ID="Label10" runat="server" Text="Inserir"></asp:Label><br/>
-    
-        <form id="form100" runat="server">
+        <form id="form100" runat="server">   
+        <div><br />
+            <asp:Button Text="Inserir" ID="o_submit" runat="server" OnClick="o_submit_Click1" /> &nbsp
+            <asp:Button ID="goBack" runat="server" Text="Index" OnClick="goBack_Click"/>
+        </div>        
+            <br />
         <div>
             <asp:RadioButton ID="RadioButton10" Text="Banda" runat="server" GroupName="escolha" OnCheckedChanged="RadioButton10_CheckedChanged" AutoPostBack="True" />
             <asp:RadioButton ID="RadioButton20" Text="Album" runat="server" GroupName="escolha" OnCheckedChanged="RadioButton20_CheckedChanged" AutoPostBack="True"/>
@@ -46,16 +47,14 @@
             <asp:Label Text="text" runat="server" id="lbl4"/><br />
             <asp:DropDownList ID="DropDownList30" runat="server" AutoPostBack="True"></asp:DropDownList><br />
         </div>
-            <br />
-            <br />
+            <br /><br />
         <div>
             <asp:Label ID="Label20" runat="server" Text="Label"></asp:Label>
-            <br /><br />
-            <asp:Button Text="Inserir" ID="o_submit" runat="server" OnClick="o_submit_Click1" />
         </div>
             <br /><br />
         <div align="center">
-            <asp:GridView ID="GridView50" runat="server" AllowPaging="True" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnPageIndexChanging="GridView50_PageIndexChanging" PageSize="6">
+            <asp:GridView ID="GridView50" runat="server" AllowPaging="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px"
+                CellPadding="4" CellSpacing="2" ForeColor="Black" PageSize="6">
                 <FooterStyle BackColor="#CCCCCC" />
                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />

@@ -25,7 +25,10 @@
 
         <div  align="center">
             
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnPageIndexChanging="GridView1_PageIndexChanging" PageSize="5" Width="349px">
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid"
+                BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnPageIndexChanging="GridView1_PageIndexChanging" 
+                PageSize="5" Width="349px">
+
                 <FooterStyle BackColor="#CCCCCC" />
                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
@@ -39,7 +42,8 @@
         </div>
         &nbsp     <br /><br />
         <div align="center">
-            <asp:GridView ID="GridView2" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Width="350px" AllowPaging="True" OnPageIndexChanging="GridView2_PageIndexChanging" PageSize="5">
+            <asp:GridView ID="GridView2" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" 
+                CellSpacing="2" ForeColor="Black" Width="350px" AllowPaging="True" OnPageIndexChanging="GridView2_PageIndexChanging" PageSize="5">
                 <FooterStyle BackColor="#CCCCCC" />
                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
@@ -53,7 +57,8 @@
         </div>
         &nbsp     <br /><br />
         <div align="center">
-            <asp:GridView ID="GridView3" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Width="350px" AllowPaging="True" OnPageIndexChanging="GridView3_PageIndexChanging" PageSize="5">
+            <asp:GridView ID="GridView3" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" 
+                CellPadding="4" CellSpacing="2" ForeColor="Black" Width="350px" AllowPaging="True" OnPageIndexChanging="GridView3_PageIndexChanging" PageSize="5">
                 <FooterStyle BackColor="#CCCCCC" />
                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />

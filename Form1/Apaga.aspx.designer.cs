@@ -78,6 +78,24 @@ namespace Form1
         protected global::System.Web.UI.WebControls.Button btn_apagar;
 
         /// <summary>
+        /// btn_Yes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Yes;
+
+        /// <summary>
+        /// btn_No control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_No;
+
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>

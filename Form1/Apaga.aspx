@@ -25,12 +25,13 @@
     
      <asp:RadioButton ID="RadioButton1" runat="server" Text="Bandas" OnCheckedChanged="RadioButton1_CheckedChange" AutoPostBack="True" GroupName="Escolha"/>
      <asp:RadioButton ID="RadioButton2" runat="server" Text="Albuns" OnCheckedChanged="RadioButton2_CheckedChange" AutoPostBack="True" GroupName="Escolha" />
-     <asp:RadioButton ID="RadioButton3" runat="server" Text="Musicas[x]" OnCheckedChanged="RadioButton3_CheckedChange" AutoPostBack="True" GroupName="Escolha" />
+     <asp:RadioButton ID="RadioButton3" runat="server" Text="Musicas" OnCheckedChanged="RadioButton3_CheckedChange" AutoPostBack="True" GroupName="Escolha" />
      <br /><br />
-   
      <asp:DropDownList ID="dropdown_apagar" runat="server" AutoPostBack="True"></asp:DropDownList>
      <br /><br />
      <asp:Button ID="btn_apagar" runat="server" Text="Apagar" OnClick="btn_apagar_Click" /><br /><br />
+     <asp:Button ID="btn_Yes" Text="Yes" runat="server" Visible="false" OnClick="btn_Yes_Click" /> &nbsp&nbsp
+     <asp:Button ID="btn_No" Text="No" runat="server" Visible="false" OnClick="btn_No_Click" /><br />
      <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> <br /><br />
  </form>
 </div>
